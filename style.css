@@ -1,0 +1,172 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #101216;
+    color: #d7dbe0;
+    font-family: "Geist Mono", monospace;
+}
+
+main {
+    width: min(900px, calc(100% - 30px));
+    margin: 50px auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.subtitle {
+    margin: 6px 0 28px;
+    color: #7f8792;
+    font-size: 14px;
+}
+
+.drop {
+    width: 100%;
+    height: 240px;
+    border: 1px dashed #454b54;
+    background: #15181d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.drop:hover,
+.drop.over {
+    border-color: #777f8b;
+    background: #191d23;
+}
+
+.drop input {
+    display: none;
+}
+
+.drop-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.drop strong {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.drop span {
+    margin-top: 7px;
+    color: #7f8792;
+    font-size: 13px;
+}
+
+.file-info {
+    margin: 24px 0 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.file-info h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    word-break: break-all;
+}
+
+.file-info p {
+    margin: 4px 0 0;
+    color: #7f8792;
+    font-size: 12px;
+}
+
+.buttons {
+    display: flex;
+    gap: 6px;
+}
+
+button {
+    border: 1px solid #3a4049;
+    background: #171a20;
+    color: #cdd2d8;
+    padding: 5px 9px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #20242b;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.box {
+    min-width: 0;
+    border: 1px solid #292e36;
+    background: #15181d;
+}
+
+.box-title {
+    padding: 9px 11px;
+    border-bottom: 1px solid #292e36;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #aeb5be;
+    font-size: 12px;
+}
+
+.box-title > div {
+    display: flex;
+    gap: 5px;
+}
+
+pre {
+    margin: 0;
+    padding: 12px;
+    min-height: 240px;
+    max-height: 500px;
+    overflow: auto;
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#hashes {
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+@media (max-width: 700px) {
+    main {
+        margin: 30px auto;
+    }
+
+    .drop {
+        height: 200px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .file-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

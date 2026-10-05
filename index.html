@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HexHash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>HexHash</h1>
+        <p class="subtitle">file hashing and hex viewer</p>
+
+        <label class="drop" id="drop" for="file">
+            <input type="file" id="file">
+            <span class="drop-content">
+                <strong>select a file</strong>
+                <span>or drag one here</span>
+            </span>
+        </label>
+
+        <section id="result" hidden>
+            <div class="file-info">
+                <div>
+                    <h2 id="name"></h2>
+                    <p id="size"></p>
+                </div>
+
+                <div class="buttons">
+                    <button id="download">download txt</button>
+                    <button id="clear">clear</button>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="box">
+                    <div class="box-title">
+                        <span>hashes</span>
+                        <button id="copy-hashes">copy</button>
+                    </div>
+                    <pre id="hashes"></pre>
+                </div>
+
+                <div class="box">
+                    <div class="box-title">
+                        <span>hex dump</span>
+                        <div>
+                            <button id="expand">expand</button>
+                            <button id="copy-hex">copy</button>
+                        </div>
+                    </div>
+                    <pre id="hex"></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
