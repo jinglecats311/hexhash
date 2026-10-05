@@ -1,5 +1,5 @@
 ﻿# HexHash
-##jinglecats311.github.io/hexhash/
+## jinglecats311.github.io/hexhash/
 
 A small file hashing and hex viewer made with Rust and WebAssembly.
 Drop a file in. Get some hashes. Look at some bytes. Very exciting.
